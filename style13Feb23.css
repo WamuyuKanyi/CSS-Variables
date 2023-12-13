@@ -1,0 +1,51 @@
+
+/* The var() function is used to insert the value of a CSS variable.
+
+CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries.
+
+A good way to use CSS variables is when it comes to the colors of your design. Instead of copy and paste the same colors over and over again, you can place them in variables. */
+/* CSS VARIABLES AKA Custom Properties hold a value and reuse it --varName: value
+property:var(--varName)
+scope
+:root{} ===global
+element ===local
+any prpoerty*/
+
+/* .heading{
+ color: orange;
+}
+
+.text{
+ color: green;
+}
+
+.main{
+ color: purple;
+}
+
+.second-heading {
+ color: red;
+}
+
+.third-heading{
+
+} */
+
+:root{
+ --primaryColor: red;
+ --secondaryColor:orange;
+ --mainTransition:all 0.4s linear;
+}
+
+.heading{
+ color: var(--primaryColor);
+}
+
+.second-heading{
+ color: var(--primaryColor);
+ transition:  var;
+}
+
+.second-heading:hover{
+ color: var(--secondaryColor);
+}
