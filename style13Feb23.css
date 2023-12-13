@@ -49,3 +49,11 @@ any prpoerty*/
 .second-heading:hover{
  color: var(--secondaryColor);
 }
+/* global   element ===local*/
+div{
+ --primaryRed: red;
+}
+
+.main{
+ color: var(--primaryRed);
+}
